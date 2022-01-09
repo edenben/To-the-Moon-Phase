@@ -1,3 +1,3 @@
-pyorbital==git+https://github.com/pytroll/pyorbital.git@feature-moon-phase
+git+https://github.com/pytroll/pyorbital.git@feature-moon-phase
 altair==4.2.0
 streamlit==1.3.1
