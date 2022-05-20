@@ -18,7 +18,7 @@
 
 from requests import Request, Session
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 import pandas as pd
 from pyorbital.moon_phase import moon_phase
 import numpy as np
@@ -641,7 +641,7 @@ with sidebar:
         **Enter an investment amount and choose a historical date range:**
     ''')
     initial_investment = st.sidebar.number_input('Investment Amount', value=100.0, min_value=0.01)
-    invest_date = st.sidebar.date_input('Buy Date',  value=pd.to_datetime('2021-09-01'))
+    invest_date = st.sidebar.date_input('Buy Date',  value=(pd.to_datetime('today') - timedelta(days=90)))
     sell_date = st.sidebar.date_input('Sell Date', value=pd.to_datetime('today'), min_value=invest_date)
 
 
